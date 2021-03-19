@@ -19,6 +19,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// The next character type in the cycle is passed into this function, to have a character randomly selected from the array.
 function randSelect(charArray){
   var index = Math.floor(Math.random() * charArray.length);
   var charRand = charArray[index];
@@ -26,31 +27,34 @@ function randSelect(charArray){
 }
 
 function generatePassword(){
+  // This window requests the length of the password and returns an alert if an invalid number is entered or none at all
   var passLength = window.prompt("Please enter the number of characters required. Must be at least 8, but no more than 126.");
-
   if (!passLength || passLength<8 || passLength >126){
     window.alert("Password must contain 8-126 characters");
     return;
   }
 
+  // These windows confirm which character type the password should contain
   var charSpec = window.confirm("Include special characters?");
   var charNum = window.confirm("Include numbers characters?");
   var charLower = window.confirm("Include lowercase characters?");
   var charUpper = window.confirm("Include uppercase characters?");
+  //Array charCheck saves the answers from above
   var charCheck = [charSpec, charNum, charLower, charUpper];
-  console.log(charCheck);
 
   if (!charSpec && !charNum && !charLower && !charUpper){
     window.alert("Password cannot be empty, please include a character type");
     return;
   } 
 
+  // Initialises password array
   var password = new Array(passLength);
   var i;
   var cycle = 0;
   var opt;
   var charNext;
   for (i = 0; i<passLength; i++){
+    // Cycle through charCheck array to select a character type to be included in the password
     while(!charCheck[cycle]){
       cycle++;
       console.log(cycle);
@@ -58,7 +62,7 @@ function generatePassword(){
         cycle = 0;
       }
     }
-    //switch to select which array to choose random character from
+    // Switch to select which array to choose random character from
     switch(cycle){
       case 0:
         charNext = randSelect(optSpec);
@@ -73,13 +77,10 @@ function generatePassword(){
         charNext = randSelect(optUpper);
         break;
     }
-    console.log(i);
-    console.log(charNext);
+
+    //The randomly selected character is added to the password array
     password[i] = charNext;
-
-
-    cycle++;
-    
+    cycle++; //Selects the next character type
   }
   var passFinal = password.join("");
   return passFinal;
