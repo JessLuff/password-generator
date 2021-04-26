@@ -15,7 +15,7 @@ This will repeat to ask if numbers, lowercase letters and uppercase letters shou
 If cancel is selected for all options, an alert will notify that the password must consist of at least one character type.
 The generated password will show in the dotted box on the webpage.
 
-![Screenshot] (./screenshot 1.png)
+![Image] (screenshot1.png)
 ![Screenshot] (screenshot 2.png)
 ![Screenshot] (screenshhot 3.png)
 ![Screenshot] (screenshhot 4.png)
