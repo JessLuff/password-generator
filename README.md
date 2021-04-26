@@ -1,5 +1,11 @@
 # passwordGenerator
 
+Password Generator
+
+https://jessluff.github.io/password-generator/
+
+This webpage uses HTML, CSS and Javascript
+
 This project features a Random Password Generator webpage. Running index.html will open the webpage and allow the user to generate a password.
 This password can include 8-126 characters and be composed of special characters, numbers and lower and uppercase letters.
 To use the webpage, select Generate Password. A window will open to ask how many characters are required.
@@ -8,3 +14,15 @@ A window will ask if special characters should be included, the user can select 
 This will repeat to ask if numbers, lowercase letters and uppercase letters should be included.
 If cancel is selected for all options, an alert will notify that the password must consist of at least one character type.
 The generated password will show in the dotted box on the webpage.
+
+![Screenshot] (screenshhot 1.png)
+![Screenshot] (screenshhot 2.png)
+![Screenshot] (screenshhot 3.png)
+![Screenshot] (screenshhot 4.png)
+![Screenshot] (screenshhot 5.png)
+![Screenshot] (screenshhot 6.png)
+![Screenshot] (error msg.png)
+
+Creator: JessLuff
+https://github.com/JessLuff
+jessica.luff@outlook.com
