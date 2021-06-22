@@ -23,6 +23,8 @@ The generated password will show in the dotted box on the webpage.
 ![Screenshot](screenshot6.png)
 ![Screenshot](errormsg.png)
 
+License: MIT
+
 Creator: JessLuff
 [GitHub](https://github.com/JessLuff)
 [Email](jessica.luff@outlook.com)
